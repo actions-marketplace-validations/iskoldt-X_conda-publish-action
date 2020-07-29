@@ -24,6 +24,7 @@ RUN apt-get install -y libgl1-mesa-dev
 RUN apt-get install -y libjasper1
 
 RUN conda install -y anaconda-client conda-build conda-verify
+RUN conda install -y numpy scipy matplotlib future tqdm
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
