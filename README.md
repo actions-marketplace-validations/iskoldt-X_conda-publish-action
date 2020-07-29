@@ -10,14 +10,14 @@ name: publish_conda
 on:
   release:
     types: [published]
-    
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: publish-to-conda
-      uses: fcakyon/conda-publish-action@v1.3
+      uses: elbeejay/conda-publish-action@v1.4
       with:
         subdir: 'conda'
         anacondatoken: ${{ secrets.ANACONDA_TOKEN }}
@@ -45,11 +45,9 @@ jobs:
 
 ### ANACONDA_TOKEN
 
-1. Get an Anaconda token (with read and write API access) at `anaconda.org/USERNAME/settings/access` 
+1. Get an Anaconda token (with read and write API access) at `anaconda.org/USERNAME/settings/access`
 2. Add it to the Secrets of the Github repository as `ANACONDA_TOKEN`
 
 ### Supported anaconda channels
 - conda-forge
-- pytorch
-- fcakyon
-- districtdatalabs
+- elbeejay

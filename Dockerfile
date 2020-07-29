@@ -13,7 +13,7 @@ RUN wget \
     && rm -f Miniconda3-latest-Linux-x86_64.sh \
 RUN conda --version
 
-LABEL "repository"="https://github.com/fcakyon/conda-publish-action"
+LABEL "repository"="https://github.com/elbeejay/conda-publish-action"
 LABEL "maintainer"="Fatih C Akyon"
 
 RUN apt-get update
