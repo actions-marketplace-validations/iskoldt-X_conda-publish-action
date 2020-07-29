@@ -1,6 +1,6 @@
-name: 'Publish Conda'
+name: 'Publish to my Conda Channel'
 description: 'Build and Publish Conda package to Anaconda'
-author: 'Fatih C Akyon'
+author: 'jh'
 branding:
   icon: 'package'  
   color: 'purple'
