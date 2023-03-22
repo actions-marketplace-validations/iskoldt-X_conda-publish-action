@@ -49,6 +49,7 @@ upload_package(){
     fi
 }
 
+export RELEASE_DATE=$INPUT_RELEASE_DATE
 #check_if_setup_file_exists
 go_to_build_dir
 check_if_meta_yaml_file_exists
