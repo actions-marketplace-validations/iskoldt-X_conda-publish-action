@@ -25,7 +25,7 @@ check_if_meta_yaml_file_exists() {
 
 build_package(){
     # Build for Linux
-    conda build -c conda-forge -c bioconda -c defaults --output-folder . .
+    conda build -c conda-forge -c bioconda -c defaults --output-folder . . --build-arg PACKAGE_VERSION=$PACKAGE_VERSION
 
     # Convert to other platforms: OSX, WIN
     if [[ $INPUT_PLATFORMS == *"osx"* ]]; then
